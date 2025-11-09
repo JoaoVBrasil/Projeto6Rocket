@@ -1,0 +1,50 @@
+#app {
+    padding: 1.25rem;
+    display: grid;
+    grid-template-columns: 28.75rem 51.25rem;
+    height: 100vh;
+}
+
+aside {
+    background-image: url(../assets/Background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: .75rem;
+    background-position: center;
+}
+
+.aside-container {
+    margin: 2rem;
+
+    header {
+        h1 {
+            font: var(--text-logo);
+            color: var(--accent-pink);
+        }
+
+        p {
+            font: var(--body-md-regular);
+            font-weight: 300;
+            color: var(--text-heading);
+        }
+    }
+}
+
+.icon-logo {
+    img {
+        width: 2.86rem;
+        height: 3rem;
+        margin-bottom: 1rem;
+    }
+}
+
+main {
+    
+    background-color: var(--shape-body);
+    header{
+        h1{
+            font: var(--heading-md);
+            color: var(--text-heading);
+        }
+    }
+}
