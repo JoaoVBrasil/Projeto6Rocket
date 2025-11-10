@@ -1,8 +1,9 @@
 #app {
     padding: 1.25rem;
     display: grid;
-    grid-template-columns: 28.75rem 51.25rem;
+    grid-template-columns: 28.75rem 1fr;
     height: 100vh;
+    gap: 1.25rem;
 }
 
 aside {
@@ -38,13 +39,19 @@ aside {
     }
 }
 
+.main-container{
+    margin: 5rem 8.125rem;
+}
+
 main {
-    
     background-color: var(--shape-body);
-    header{
-        h1{
+    border-radius: 0.75rem;
+
+    header {
+        h1 {
             font: var(--heading-md);
             color: var(--text-heading);
+            margin-bottom: 2.5rem;
         }
     }
 }
