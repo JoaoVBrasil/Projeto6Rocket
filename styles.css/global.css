@@ -64,12 +64,17 @@
     --body-xs-regular: normal 400 0.75rem/normal var(--font-family-open-sans);
     --body-xs-semibold: normal 600 0.75rem/normal var(--font-family-open-sans);
 
-
-
-
 }
 
 body {
     background-color: var(--shape-background);
 }
 
+.grid {
+    display: grid;
+}
+
+.grid-column-16 {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+}
