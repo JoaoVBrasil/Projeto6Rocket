@@ -27,11 +27,13 @@
     }
 
     input {
+        height: 3rem;
+        padding-left: 1rem;
         font: var(--body-md-regular);
         color: var(--text-heading);
-        /*Cor do texto digitado */
 
-        padding: 1rem;
+
+        /* padding: 1rem; */
         background-color: var(--input-base);
         border-radius: .5rem;
         border: 1px solid var(--input-stroke);
@@ -49,7 +51,11 @@
 }
 
 .segmented-control {
-    padding: 1rem;
+
+    height: 3rem;
+    max-height: 3rem;
+    column-gap: 0.25rem;
+    padding: 0.25rem;
 
     background-color: var(--input-base);
     border-radius: .5rem;
@@ -60,7 +66,8 @@
         font: var(--body-md-regular);
         color: var(--text-body);
 
-        #building-icon {
+        #building-icon,
+        #video-icon {
             width: 1rem;
             height: 1rem;
             fill: var(--input-placeholder);
@@ -70,17 +77,56 @@
 
 
 .option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 
-    .svg {
-        width: 1rem;
-        height: ;
-    }
+    cursor: pointer;
 
-    /* se for seliocionado muda a cor */
     input {
         display: none;
     }
 
+    &:has(input:checked) {
+        background-color: var(--shape-button);
+        color: #fff;
+        border-radius: 0.25rem;
+        font: var(--body-md-semibold);
 
+    }
 
+    &:has(input:checked) svg path {
+        fill: var(--brand-light) !important;
+    }
 }
+
+/* 
+
+
+
+input[type="date"] {
+    border: 1px solid #333;
+    padding: 10px 14px;
+    border-radius: 8px;
+     color: var(--input-placeholder);
+}
+
+/* cor do “placeholder” quando vazio */
+/* input[type="date"]:not(:focus):invalid {
+     color: var(--input-placeholder);
+}
+
+/* Safari e Chrome — campos internos */
+/* input[type="date"]::-webkit-datetime-edit-text,
+input[type="date"]::-webkit-datetime-edit-month-field,
+input[type="date"]::-webkit-datetime-edit-day-field,
+input[type="date"]::-webkit-datetime-edit-year-field {
+    color: var(--input-placeholder); /* cor placeholder */
+}
+
+/* ícone do calendário 
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    opacity: .6;
+}  */
